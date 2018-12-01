@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomViewTest">
+        <attr name="maxCards" format="integer"/>
+        <attr name="cardOverlap" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="ViewTest">
+        <attr name="fill" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CardColumnLayout">
+        <attr name="overlap" format="float"/>
+    </declare-styleable>
+</resources>

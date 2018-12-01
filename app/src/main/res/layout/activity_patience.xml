@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BB00"
+    tools:context="com.sidi.cardgames.activity.PatienceActivity">
+
+    <ImageView
+        android:id="@+id/ivDeck"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:onClick="deckClicked"
+        app:layout_constraintStart_toStartOf="@+id/llColumn1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/ivSpades"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:onClick="foundationPileClicked"
+        app:layout_constraintStart_toStartOf="@+id/llColumn4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/ivSideDeck"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:onClick="sideDeckClicked"
+        app:layout_constraintStart_toStartOf="@+id/llColumn2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="59dp"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:orientation="vertical"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView8"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--app:srcCompat="@drawable/c01_small" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView9"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--app:srcCompat="@drawable/c02" />-->
+    <!--</LinearLayout>-->
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn1"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llColumn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDeck">
+
+        <!--<include android:id="@+id/test"-->
+        <!--layout="@layout/view_card_column_card"/>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView8"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--app:srcCompat="@drawable/c11" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView9"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="-40dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--app:srcCompat="@drawable/c02" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView10"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="-40dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--app:srcCompat="@drawable/c03" />-->
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn2"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llColumn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llColumn1"
+        app:layout_constraintTop_toTopOf="@+id/llColumn1">
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn3"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llColumn4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llColumn2"
+        app:layout_constraintTop_toTopOf="@+id/llColumn2">
+
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn4"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llColumn5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llColumn3"
+        app:layout_constraintTop_toTopOf="@+id/llColumn3">
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn5"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llColumn6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llColumn4"
+        app:layout_constraintTop_toTopOf="@+id/llColumn4">
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn6"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llColumn7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llColumn5"
+        app:layout_constraintTop_toTopOf="@+id/llColumn5">
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <com.sidi.cardgames.ui.CardColumnLayout
+        android:id="@+id/llColumn7"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="columnClicked"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/llColumn6"
+        app:layout_constraintTop_toTopOf="@+id/llColumn6">
+    </com.sidi.cardgames.ui.CardColumnLayout>
+
+    <ImageView
+        android:id="@+id/ivHearts"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:onClick="foundationPileClicked"
+        app:layout_constraintStart_toStartOf="@+id/llColumn5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/ivClubs"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:onClick="foundationPileClicked"
+        app:layout_constraintStart_toStartOf="@+id/llColumn6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/ivDiamonds"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:onClick="foundationPileClicked"
+        app:layout_constraintStart_toStartOf="@+id/llColumn7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+</android.support.constraint.ConstraintLayout>

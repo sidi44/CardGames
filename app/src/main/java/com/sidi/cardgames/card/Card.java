@@ -31,10 +31,6 @@ public class Card {
         mFaceUp = isFaceUp;
     }
 
-    public void turn() {
-        mFaceUp = !mFaceUp;
-    }
-
     public String toString() {
 
         String string = null;
